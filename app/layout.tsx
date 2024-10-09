@@ -10,7 +10,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "CompleteME 🥺",
+  title: "CompleteME 😡",
   description:
     "Track tasks, visualize progress, and achieve your goals with ease.",
 };
