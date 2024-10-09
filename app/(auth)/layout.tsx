@@ -3,8 +3,8 @@ export default function AuthLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  (
-    <div className="flex-center">
+  return(
+    <div className="flex-center h-screen">
       {children}
     </div>
   );

@@ -1,7 +1,7 @@
 export default function page() {
   return (
-    <div>
-      
+    <div className="w-full">
+      lorem500
     </div>
   );
 }

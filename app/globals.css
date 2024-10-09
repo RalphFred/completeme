@@ -86,11 +86,19 @@ body {
 
 
 @layer utilities{
+  .wrapper {
+    @apply max-w-7xl lg:mx-auto p-5 md:px-10 xl:px-0 w-full;
+  }
+
   .flex-center {
     @apply flex justify-center items-center;
   }
 
   .flex-between {
     @apply flex justify-between items-center;
+  }
+  
+  .sidebar {
+    @apply sticky left-0 top-0 flex w-fit flex-col border-none pt-8 max-md:hidden lg:w-[300px] lg:pl-8;
   }
 }
