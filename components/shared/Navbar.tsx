@@ -1,11 +1,12 @@
 "use client";
-import { UserButton } from "@clerk/nextjs";
+import { UserButton, useUser } from "@clerk/nextjs";
 import { Switch } from "@/components/ui/switch";
 import { useEffect, useState } from "react";
 
 export default function Navbar() {
 
   const [theme, setTheme] = useState("light");
+  const { user } = useUser(); 
 
   useEffect(() => {
     document.documentElement.className = theme;
@@ -17,7 +18,7 @@ export default function Navbar() {
 
   return (
     <nav className="hidden lg:flex justify-between bg-blue-5 dark:bg-blue-1 p-6">
-      <h1 className="text-2xl font-semibold">Hey👋</h1>
+      <h1 className="text-2xl font-semibold">Welcome back, {user?.firstName}!</h1>
 
       <div className="flex gap-8">
         <div className="flex-center">
