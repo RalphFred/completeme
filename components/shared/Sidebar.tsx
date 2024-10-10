@@ -5,10 +5,10 @@ import Link from "next/link";
 
 export default function Sidebar() {
   return (
-    <div className="sidebar bg-blue-5 h-screen">
-      <div className="flex-1 flex flex-col gap-8">
+    <div className="sidebar bg-blue-5 dark:bg-blue-1 h-screen">
+      <div className="flex-1 flex flex-col gap-6">
         <div className="text-3xl font-semibold">CompleteME 😡</div>
-        <div className="flex flex-col gap-8 text-lg">
+        <div className="flex flex-col gap-10 text-lg">
           {SidebarLinks.map((link) => (
             <Link
               href={link.url}
@@ -21,7 +21,7 @@ export default function Sidebar() {
           ))}
         </div>
       </div>
-      <div className="mb-8">
+      <div>
         <SignOutButton redirectUrl="/">
           <div className="flex items-center text-lg gap-2">
             <Image

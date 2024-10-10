@@ -99,6 +99,51 @@ body {
   }
   
   .sidebar {
-    @apply sticky left-0 top-0 flex w-fit flex-col border-none pt-8 max-md:hidden lg:w-[300px] lg:pl-8;
+    @apply sticky left-0 top-0 flex w-fit flex-col border-none py-6 max-lg:hidden lg:w-[300px] lg:pl-8;
   }
+}
+
+/* ---------Custome Classes ----------- */
+
+.icon-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 99;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #6B7280;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: all 0.3s linear;
+  position: relative;
+}
+
+/* Default state */
+.bar--1 {
+  transform-origin: top left;
+}
+
+.bar--3 {
+  transform-origin: bottom left;
+}
+
+.open .bar--1 {
+  transform: rotate(45deg) translate(5px, -4px);
+}
+
+.open .bar--2 {
+  opacity: 0;
+}
+
+.open .bar--3 {
+  transform: rotate(-45deg) translate(4px, 4px);
 }

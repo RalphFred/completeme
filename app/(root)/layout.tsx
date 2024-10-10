@@ -1,3 +1,5 @@
+import MobileNav from "@/components/shared/MobileNav";
+import Navbar from "@/components/shared/Navbar";
 import Sidebar from "@/components/shared/Sidebar";
 
 export default function RootLayout({
@@ -5,12 +7,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
-    <div className="relative flex">
+    <div className="relative flex duration-200">
       <Sidebar />
 
-      <section className="flex-1 bg-red-300 flex min-h-screen flex-col p-4 sm:p-14">
-        
+      <section className="flex-1 bg-white dark:bg-slate-700 flex min-h-screen flex-col">
+        <Navbar />
+        <MobileNav />
         <div className="w-full">
           {children} 
         </div> 
