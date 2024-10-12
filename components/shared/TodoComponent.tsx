@@ -3,7 +3,6 @@ import { useState, useEffect, useRef } from "react";
 import { useUser } from "@clerk/nextjs";
 import { addTask, getUserTasks, updateTask, deleteTask } from "@/lib/firestore";
 import { TaskParams } from "@/types";
-import TodoCard from "@/components/shared/TodoCard";
 
 import {
   Dialog,
@@ -17,6 +16,7 @@ import {
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import TodoCard from "./TodoCard";
 
 export default function Page() {
   const { user } = useUser();
