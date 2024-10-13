@@ -1,7 +1,7 @@
 export default function page() {
   return (
     <div>
-      Settings
+      <h1>This page is under constuction</h1>
     </div>
   );
 }

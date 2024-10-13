@@ -4,12 +4,8 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import Sidebar from "./Sidebar";
 import { SidebarLinks } from "@/constants";
 import Link from "next/link";
 import { SignOutButton } from "@clerk/nextjs";

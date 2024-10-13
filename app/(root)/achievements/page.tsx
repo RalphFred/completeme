@@ -1,7 +1,7 @@
 export default function page() {
   return (
     <div>
-      Achievements
+      <h1>This Page is under construction</h1>
     </div>
   );
 }
