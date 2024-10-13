@@ -27,6 +27,12 @@ export const updateTask = async (userId: string, taskId: string, taskData: Parti
 
 // Delete a task
 export const deleteTask = async (userId: string, taskId: string) => {
-  const taskDocRef = doc(db, 'users', userId, 'tasks', taskId);
-  await deleteDoc(taskDocRef);
+  try {
+    const taskDocRef = doc(db, 'users', userId, 'tasks', taskId);
+    await deleteDoc(taskDocRef);
+    console.log(`Task ${taskId} deleted successfully.`);
+  } catch (error) {
+    console.error(`Failed to delete task ${taskId}:`, error);
+  }
 };
+

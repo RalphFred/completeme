@@ -17,6 +17,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import TodoCard from "./TodoCard";
+import Image from "next/image";
 
 export default function Page() {
   const { user } = useUser();
@@ -188,9 +189,9 @@ export default function Page() {
                 ))}
               </DialogDescription>
             </DialogHeader>
-            <div className="mt-4 flex justify-end">
+            <DialogClose className="mt-4 flex justify-end">
               <Button onClick={handleAddTask}>Add Task</Button>
-            </div>
+            </DialogClose>
           </DialogContent>
         </Dialog>
 
@@ -240,9 +241,26 @@ export default function Page() {
                         </div>
                       ))}
                     </DialogDescription>
-                    <DialogClose>
-                      <Button onClick={handleUpdateTask} className="w-full">Save Changes</Button>
-                    </DialogClose>
+                    <div className="flex gap-4">
+                      <DialogClose className="w-full">
+                        <Button onClick={handleUpdateTask} className="w-full">
+                          Save Changes
+                        </Button>
+                      </DialogClose>
+                      <DialogClose>
+                        <Button
+                          onClick={() => handleDeleteTask(selectedTask?.id)}
+                          className="bg-red-200 hover:bg-red-300 w-[70px]"
+                        >
+                          <Image
+                            src="images/delete.svg"
+                            alt="Delete icon"
+                            width={24}
+                            height={24}
+                          />
+                        </Button>
+                      </DialogClose>
+                    </div>
                   </DialogHeader>
                 </>
               )}
