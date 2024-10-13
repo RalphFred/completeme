@@ -11,7 +11,7 @@ export default function StatisticsOverview({ tasks }: StatisticsOverviewProps) {
   );
 
   return (
-    <div className="p-4 bg-gray-100 rounded-lg mt-4">
+    <div className="p-4 bg-gray-100 dark:bg-gray-600 rounded-lg mt-4">
       <h2 className="text-lg font-semibold mb-4">Statistics Overview</h2>
       <div className="space-y-2">
         <div>Tasks Completed Today: {completedToday}</div>
